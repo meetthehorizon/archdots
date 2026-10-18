@@ -2,6 +2,7 @@
 ---- ENVIRONMENT ----
 ---------------------
 hl.env("GTK_THEME", "rose-pine-gtk")
+hl.env("QT_STYLE_OVERRIDE", "kvantum")
 
 ------------------
 ---- MONITORS ----

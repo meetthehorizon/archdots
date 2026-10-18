@@ -35,6 +35,8 @@ hyprpolkitagent
 hyprshot
 inetutils
 keychain
+kvantum
+kvantum-qt5
 lazygit
 less
 libva-nvidia-driver
