@@ -1,6 +1,8 @@
 ---------------------
 ---- ENVIRONMENT ----
 ---------------------
+-- Render on the AMD iGPU only (by-path is stable even when the dGPU powers off)
+hl.env("AQ_DRM_DEVICES", "/dev/dri/by-path/pci-0000:65:00.0-card")
 hl.env("GTK_THEME", "rose-pine-gtk")
 hl.env("QT_STYLE_OVERRIDE", "kvantum")
 
