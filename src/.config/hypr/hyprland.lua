@@ -302,6 +302,9 @@ hl.bind(
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("pidof slurp || hyprshot -m window -o 'Pictures/Screenshots/'"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("pidof slurp || hyprshot -m region -o 'Pictures/Screenshots/'"))
 
+-- Cycle wallpaper with a seamless transition (awww)
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("/home/conart/.local/bin/wallcycle"))
+
 -- Requires playerctl
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
