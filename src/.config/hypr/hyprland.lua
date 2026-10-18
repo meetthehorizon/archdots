@@ -1,8 +1,6 @@
 ---------------------
 ---- ENVIRONMENT ----
 ---------------------
--- Render on the AMD iGPU only (card1) so the NVIDIA dGPU stays asleep
-hl.env("AQ_DRM_DEVICES", "/dev/dri/card1")
 hl.env("GTK_THEME", "rose-pine-gtk")
 hl.env("QT_STYLE_OVERRIDE", "kvantum")
 
