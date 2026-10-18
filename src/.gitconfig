@@ -5,7 +5,7 @@
 [user]
 	name = Kshitij Sharma
 	email = kshitij.dev@proton.me
-	signingkey = B56189C6E895110D
+	signingkey = 26D81C52FD4E3FF1
 [pull]
 	rebase = true
 [url "git@github.com:"]
