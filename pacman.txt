@@ -2,6 +2,7 @@ alacritty
 amd-ucode
 anki
 asusctl
+awww
 base
 base-devel
 bat
