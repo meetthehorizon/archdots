@@ -1,0 +1,38 @@
+# Global mise config — personal defaults, applied in every directory.
+# Projects override these with their own mise.toml (see the nvim config
+# repo for a fully pinned example).
+
+[tools]
+# The editor itself
+neovim = "latest"
+
+# Runtimes
+node = "latest" # npm-based LSPs
+go = "latest"   # builds gopls, goimports, gofumpt from source
+rust = "latest" # rustfmt
+
+# --- LSP servers ---
+"github:clangd/clangd" = "latest"                 # C/C++
+"go:golang.org/x/tools/gopls" = "latest"          # Go
+"npm:pyright" = "latest"                          # Python
+"npm:typescript-language-server" = "latest"       # TypeScript/JavaScript
+"npm:bash-language-server" = "latest"             # Bash
+"npm:fish-lsp" = { version = "latest", allow_low_downloads = true } # Fish
+"npm:yaml-language-server" = "latest"             # YAML
+"lua-language-server" = "latest"                  # Lua
+
+# --- Formatters ---
+"clang-format" = "latest"                            # C
+"stylua" = "latest"                                  # Lua
+"ruff" = "latest"                                    # Python
+"go:golang.org/x/tools/cmd/goimports" = "latest"     # Go
+"gofumpt" = "latest"                                 # Go
+"shfmt" = "latest"                                   # Shell
+
+# --- Linters ---
+"golangci-lint" = "latest"      # Go
+"shellcheck" = "latest"         # Shell
+"markdownlint-cli2" = "latest"  # Markdown
+
+# --- Search (telescope live_grep) ---
+"rg" = "latest"
