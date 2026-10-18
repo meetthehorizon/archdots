@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Work around Anki crashes on this setup:
+#  - Qt6 Quick segfaults in Mesa/Gallium (buffer unmap) -> use software rendering
+#  - QtWebEngine hits a Chromium sandbox abort -> disable the sandbox
+export QTWEBENGINE_DISABLE_SANDBOX=1
+export QT_QUICK_BACKEND=software
+exec /usr/sbin/anki "$@"
