@@ -2,4 +2,8 @@ localsend-bin
 paru
 paru-debug
 proton-drive-cli-git
+rose-pine-gtk-theme-full
 sbctl-dracut-conf
+tty-clock
+visual-studio-code-bin
+wifitui
