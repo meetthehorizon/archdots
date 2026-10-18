@@ -14,6 +14,7 @@ btop
 btrfs-progs
 calcurse
 cava
+dolphin
 dunst
 efibootmgr
 eza
@@ -46,7 +47,6 @@ man-db
 man-pages
 man-pages-uk
 mpv
-nautilus
 neovim
 networkmanager
 noto-fonts
@@ -90,7 +90,6 @@ spotify-launcher
 starship
 stow
 stylua
-thunar
 tldr
 trash-cli
 tree
