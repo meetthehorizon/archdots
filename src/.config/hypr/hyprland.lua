@@ -40,7 +40,7 @@ hl.monitor({
 local browser = "firefox"
 local fileManager = "dolphin"
 local menu = "fuzzel"
-local terminal = "alacritty"
+local terminal = "kitty"
 
 -------------------
 ---- AUTOSTART ----
