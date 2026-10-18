@@ -1,3 +1,8 @@
+---------------------
+---- ENVIRONMENT ----
+---------------------
+hl.env("GTK_THEME", "rose-pine-gtk")
+
 ------------------
 ---- MONITORS ----
 ------------------
@@ -44,6 +49,10 @@ local terminal = "alacritty"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function()
+  -- Dark theme + rose-pine for GTK (libadwaita reads color-scheme via the portal)
+  hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
+  hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'rose-pine-gtk'")
+
   hl.exec_cmd(terminal, { workspace = "1 silent" })
   hl.exec_cmd(terminal .. " -e opencode", { workspace = "2 silent" })
 
