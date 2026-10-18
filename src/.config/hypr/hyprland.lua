@@ -194,6 +194,7 @@ hl.config({
     touchpad = {
       natural_scroll = true,
       middle_button_emulation = true,
+      tap_button_map = "lrm", -- 1 finger = left, 2 fingers = right, 3 fingers = middle
     },
   },
 })
