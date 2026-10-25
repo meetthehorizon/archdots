@@ -28,6 +28,7 @@ rust = "latest" # rustfmt
 "go:golang.org/x/tools/cmd/goimports" = "latest"     # Go
 "gofumpt" = "latest"                                 # Go
 "shfmt" = "latest"                                   # Shell
+"taplo" = "latest"                                   # TOML
 
 # --- Linters ---
 "golangci-lint" = "latest"      # Go
