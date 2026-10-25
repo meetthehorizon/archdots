@@ -22,6 +22,7 @@ grub
 grub-btrfs
 hyprland
 hyprlock
+hyprsunset
 inotify-tools
 kitty
 kvantum

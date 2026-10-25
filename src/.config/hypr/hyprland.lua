@@ -26,7 +26,7 @@ hl.monitor({
 })
 hl.monitor({
   output = "HDMI-A-1",
-  mode = "1920x1080@120",
+  mode = "2560x1440@120",
   position = "auto-center-right",
 })
 
@@ -39,6 +39,7 @@ local browser = "firefox"
 local fileManager = "dolphin"
 local menu = "fuzzel"
 local terminal = "kitty"
+local editor = "kitty -e nvim"
 
 -------------------
 ---- AUTOSTART ----
@@ -55,10 +56,11 @@ hl.on("hyprland.start", function()
   hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'rose-pine-gtk'")
 
   hl.exec_cmd(terminal, { workspace = "1 silent" })
-  hl.exec_cmd(terminal .. " -e opencode", { workspace = "2 silent" })
-
-  hl.exec_cmd(terminal, { workspace = "special:admin" })
-  hl.exec_cmd(browser, { workspace = "special:browser" })
+  hl.exec_cmd(browser, { workspace = "2 silent" })
+  hl.exec_cmd(editor, { workspace = "3 silent" })
+  hl.exec_cmd("spotify", { workspace = "4 silent" })
+  hl.exec_cmd("anki", { workspace = "9 silent" })
+  hl.exec_cmd("obsidian", { workspace = "10 silent" })
 end)
 
 hl.config({
@@ -256,13 +258,6 @@ for i = 1, 10 do
 end
 hl.bind("SUPER + SHIFT + M", hl.dsp.workspace.move({ monitor = "+1" }))
 
--- Special Worksapces
-hl.bind(mainMod .. " + A", hl.dsp.workspace.toggle_special("admin"))
-hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = "special:admin" }))
-
-hl.bind(mainMod .. " + B", hl.dsp.workspace.toggle_special("browser"))
-hl.bind(mainMod .. " + SHIFT + B", hl.dsp.window.move({ workspace = "special:browser" }))
-
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
@@ -321,6 +316,14 @@ hl.bind(
     "systemctl --user is-active --quiet waybar && systemctl --user stop waybar || systemctl --user start waybar"
   ),
   { locked = true }
+)
+
+-- Toggle the blue-light filter (hyprsunset)
+hl.bind(
+  mainMod .. " + N",
+  hl.dsp.exec_cmd(
+    "systemctl --user is-active --quiet hyprsunset && systemctl --user stop hyprsunset || systemctl --user start hyprsunset"
+  )
 )
 
 --------------------------------
